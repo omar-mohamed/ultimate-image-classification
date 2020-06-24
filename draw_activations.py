@@ -34,7 +34,7 @@ else:
 FLAGS.batch_size = 1
 test_generator = get_generator(FLAGS.test_csv,FLAGS)
 
-images_names = test_generator.get_images_names()
+images_names = test_generator.x_path
 
 
 
@@ -42,6 +42,9 @@ for batch_i in tqdm(range(test_generator.steps)):
     batch, _ = test_generator.__getitem__(batch_i)
     image_path = os.path.join(FLAGS.image_directory, images_names[batch_i])
     original = cv2.imread(image_path)
+    if original is None:
+        print(f"There was an error loading {image_path} using opencv")
+        continue
     preds = visual_model.predict(batch)
     predicted_class = np.argmax(preds[0])
     label = FLAGS.classes[predicted_class]
@@ -54,6 +57,6 @@ for batch_i in tqdm(range(test_generator.steps)):
     cv2.rectangle(output, (0, 0), (340, 40), (0, 0, 0), -1)
     cv2.putText(output, label, (10, 25), cv2.FONT_HERSHEY_SIMPLEX,
                 0.8, (255, 255, 255), 2)
-
-    cv2.imwrite(os.path.join(write_path,images_names[batch_i]),output)
+    img_name = os.path.basename(images_names[batch_i])
+    cv2.imwrite(os.path.join(write_path,img_name),output)
 

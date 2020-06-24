@@ -50,7 +50,7 @@ opt = get_optimizer(FLAGS.optimizer_type, learning_rate)
 
 if FLAGS.multi_label_classification:
     visual_model.compile(loss='binary_crossentropy', optimizer=opt,
-                         metrics=[metrics.BinaryAccuracy(threshold=FLAGS.multilabel_threshold)])
+                         metrics=[metrics.BinaryAccuracy(threshold=0.5)])
 else:
     visual_model.compile(loss='sparse_categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
     training_stats_file = {}

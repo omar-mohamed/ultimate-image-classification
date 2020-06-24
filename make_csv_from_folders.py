@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 
-path = './data/images'
+path = "./data/images"
 image_paths = glob(path+"/*/*")
 csv_dict={"path":[],"class":[]}
 write_path = './data/all_data.csv'

@@ -41,7 +41,7 @@ class argHandler(dict):
                     'Learning rate decay factor when validation loss stops decreasing')
         self.define('optimizer_type', 'Adam', 'Choose from (Adam, SGD, RMSprop, Adagrad, Adadelta, Adamax, Nadam)')
         self.define('gpu_percentage', 0.95, 'gpu utilization. If 0 it will use the cpu')
-        self.define('batch_size', 2, 'batch size for training and testing')
+        self.define('batch_size', 16, 'batch size for training and testing')
         self.define('multilabel_threshold_range', [0.01, 0.99],
                     'The threshold from which to detect a class. Only used with multi label classification. It will automatically search for the best threshold in the range and choose it ')
         self.define('generator_workers', 4, 'The number of cpu workers generating batches.')
