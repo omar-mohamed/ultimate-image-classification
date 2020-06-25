@@ -96,7 +96,7 @@ This is an example usecase. We have 3 classes: gym, pool, and operating room. <b
 
 ### Results
  <br/>
- <img src="https://user-images.githubusercontent.com/6074821/85786603-b5831e80-b72a-11ea-9769-117b2ccd44a2.png" width="500" align="left|top">
+ <img src="https://user-images.githubusercontent.com/6074821/85786603-b5831e80-b72a-11ea-9769-117b2ccd44a2.png" width="700" align="left|top">
  <br/>
 
 - Test set results:
