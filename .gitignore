@@ -1,2 +1,4 @@
 data/images/
 .idea/
+saved_model/
+__pycache__/

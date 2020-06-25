@@ -57,8 +57,7 @@ class MultipleClassAUROC(Callback):
 
         print(f"*** epoch#{epoch + 1} dev auroc ***")
         mean_auroc, prec,rec,fscore, AP , exact_accuracy, ham_loss = get_multilabel_evaluation_metrics(y_hat,y,self.class_names,self.thresh_range)
-        print(
-            f"precision:{prec:.2f}, recall: {rec:.2f}, fscore: {fscore:.2f}, AP: {AP:.2f}, exact match accuracy: {exact_accuracy:.2f}, hamming loss: {ham_loss:.2f}")
+
         # customize your multiple class metrics here
         print(f"mean auroc: {mean_auroc}")
         if mean_auroc > self.stats["best_mean_auroc"]:

@@ -30,14 +30,14 @@ def get_metrics_from_generator(generator,threshold_range=(0.01, 0.99), verbose=1
                                            max_queue_size=FLAGS.generator_queue_length, verbose=verbose)
     y = generator.get_y_true()
     if FLAGS.multi_label_classification:
-        get_multilabel_evaluation_metrics(y_hat, y, FLAGS.classes, thresh_range=threshold_range,image_names=generator.get_images_names(),save_path=os.path.join(FLAGS.save_model_path,'exact_match.csv'))
+        get_multilabel_evaluation_metrics(y_hat, y, FLAGS.classes, thresh_range=threshold_range)
     else:
         y_hat = y_hat.argmax(axis=1)
         get_evaluation_metrics(y_hat, y, FLAGS.classes)
 
 if FLAGS.multi_label_classification:
     visual_model.compile(loss='binary_crossentropy',
-                         metrics=[metrics.BinaryAccuracy(threshold=FLAGS.multilabel_threshold)])
+                         metrics=[metrics.BinaryAccuracy(threshold=0.5)])
 else:
     visual_model.compile(loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
