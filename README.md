@@ -84,7 +84,7 @@ We want to make your life easier when it comes to evaluation so we added the fol
 - Open configs.py and link to the training and testing csvs, and change any training parameters
 - Run train.py
 - Link to the saved model in configs.py in 'load_model_path' and run test.py
-- Run draw_activations.py to get activation highlighting and saving on the original images
+- Run draw_activations.py to get activation highlighting on the original images. The images will be saved next to the model (optional)
 - Run compress weights to get smaller saved model (optional)
 - Draw training log by running draw_training_log.py (optional)
 
