@@ -95,7 +95,7 @@ This is an example usecase on a small dataset of about 450 images. We have 3 cla
 - Extract inside 'data' folder to have 'data/images'
 - Run train.py
 ### Results
-These are the results when running on the default configs.py using a pre-trained Densenet121.
+- These are the results when running on the default configs.py using a pre-trained Densenet121.
  <br/>
  <img src="https://user-images.githubusercontent.com/6074821/85786603-b5831e80-b72a-11ea-9769-117b2ccd44a2.png" width="700" align="left|top">
  <br/>
