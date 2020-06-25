@@ -102,12 +102,13 @@ This is an example usecase. We have 3 classes: gym, pool, and operating room. <b
 - Test set results:
  <br/>
  <img src="https://user-images.githubusercontent.com/6074821/85793670-a48bda80-b735-11ea-9fb5-10a4cde986b0.png" width="500" align="left|top">
- <br/>
- <img src="https://user-images.githubusercontent.com/6074821/85793918-0c422580-b736-11ea-85ac-3b7bfc883593.png" width="300" height="250" align="left">
- <img src="https://user-images.githubusercontent.com/6074821/85794105-5aefbf80-b736-11ea-8257-0abc79bc2e02.png" width="300" height = "250" align="left">
- <img src="https://user-images.githubusercontent.com/6074821/85794298-a6a26900-b736-11ea-9a5d-752d81a479fa.png" width="300" height = "250" align="left|top">
- <br/>
+  
+<p float="left|top">
 
+ <img src="https://user-images.githubusercontent.com/6074821/85793918-0c422580-b736-11ea-85ac-3b7bfc883593.png" width="300" height="250" >
+ <img src="https://user-images.githubusercontent.com/6074821/85794105-5aefbf80-b736-11ea-8257-0abc79bc2e02.png" width="300" height = "250" >
+ <img src="https://user-images.githubusercontent.com/6074821/85794298-a6a26900-b736-11ea-9a5d-752d81a479fa.png" width="300" height = "250">
+</p>
 
 # Acknowledgements
 - Used Grad-Cam implementation [here](https://www.pyimagesearch.com/2020/03/09/grad-cam-visualize-class-activation-maps-with-keras-tensorflow-and-deep-learning/)
