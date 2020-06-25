@@ -11,7 +11,7 @@ class argHandler(dict):
                     'path to testing csv containing the images names and the labels')
         self.define('image_directory', '',
                     'this path will be concatenated in front of the path in the csv. If the path in the csv is already complete leave it empty')
-        self.define('visual_model_name', 'MobileNetV2',
+        self.define('visual_model_name', 'DenseNet121',
                     'select from (VGG16, VGG19, DenseNet121, DenseNet169, DenseNet201, Xception, ResNet50, ResNet101, ResNet152, ResNet50V2, ResNet101V2, ResNet152V2, InceptionV3, InceptionResNetV2, NASNetMobile, NASNetLarge, MobileNet, MobileNetV2, EfficientNetB0 to EfficientNetB7). Note that the classifier layer is removed by default.')
         self.define('image_target_size', (224, 224, 3), 'the target size to resize the image')
         self.define('num_epochs', 100, 'maximum number of epochs')
