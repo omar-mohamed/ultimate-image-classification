@@ -18,7 +18,7 @@ def set_gpu_usage(gpu_memory_fraction):
 def get_generator(csv_path,FLAGS, data_augmenter=None):
     return AugmentedImageSequence(
         dataset_csv_file=csv_path,
-        label_columns=FLAGS.csv_label_columns,
+        label_column=FLAGS.csv_label_column,
         class_names=FLAGS.classes,
         multi_label_classification=FLAGS.multi_label_classification,
         source_image_dir=FLAGS.image_directory,

@@ -1,15 +1,23 @@
 import pandas as pd
 import os
 import numpy as np
-from configs import argHandler  # Import the default arguments
+import argparse
 
-dataset_df = pd.read_csv('./data/all_data.csv')
+parser = argparse.ArgumentParser()
 
-test_set_fraction=0.2
+parser.add_argument('--csv_path', nargs='?', const="./data/all_data.csv", default="./data/all_data.csv", help='The path to the csv representing all the data')
+parser.add_argument('--test_split_fraction', nargs='?',type=float, const=0.2, default=0.2, help='The split fraction for the test set. It will automatically calculate this fraction for each class')
+parser.add_argument('--shuffle', nargs='?',type=bool,const=True, default=True, help='Shuffle the data or not.')
 
-shuffle=True
 
-if shuffle:
+
+args = parser.parse_args()
+CSV_PATH, SPLIT_FRACTION, SHUFFLE = args.csv_path, args.test_split_fraction, args.shuffle
+
+
+dataset_df = pd.read_csv(CSV_PATH)
+
+if SHUFFLE:
     dataset_df = dataset_df.sample(frac=1., random_state=np.random.randint(1,100))
 
 train_dict = {"path":[],"class":[]}
@@ -26,7 +34,7 @@ for index, row in dataset_df.iterrows():
 
 for index, row in dataset_df.iterrows():
     label = row['class']
-    class_test_limit = test_set_fraction * class_size[label]
+    class_test_limit = SPLIT_FRACTION * class_size[label]
     if test_sizes[label] < class_test_limit:
         test_sizes[label] +=1
         test_dict["path"].append(row['path'])
@@ -41,6 +49,7 @@ print("Number of records for each class in test set: {}".format(test_sizes))
 training_df=pd.DataFrame(train_dict)
 testing_df=pd.DataFrame(test_dict)
 
-training_df.to_csv(os.path.join("./data","training_set.csv"), index=False)
+base_dire = os.path.dirname(CSV_PATH)
+training_df.to_csv(os.path.join(base_dire,"training_set.csv"), index=False)
 
-testing_df.to_csv(os.path.join("./data","testing_set.csv"), index=False)
+testing_df.to_csv(os.path.join(base_dire,"testing_set.csv"), index=False)

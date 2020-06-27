@@ -13,7 +13,7 @@ class AugmentedImageSequence(Sequence):
     For more information of imgaug see: https://github.com/aleju/imgaug
     """
 
-    def __init__(self, dataset_csv_file, label_columns, multi_label_classification, class_names, source_image_dir,
+    def __init__(self, dataset_csv_file, label_column, multi_label_classification, class_names, source_image_dir,
                  batch_size=16,
                  target_size=(224, 224), augmenter=None, verbose=0, steps=None,
                  shuffle_on_epoch_end=True, random_state=1):
@@ -35,7 +35,7 @@ class AugmentedImageSequence(Sequence):
         self.shuffle = shuffle_on_epoch_end
         self.random_state = random_state
         self.class_names = class_names
-        self.label_columns = label_columns
+        self.label_columns = label_column
         self.multi_label_classification = multi_label_classification
         self.class_counts=[0]*len(class_names)
 
