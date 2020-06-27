@@ -1,5 +1,5 @@
 # ultimate-image-classification
-A black box module to use on any image classification problem. Plug in your data, choose which pre-trained model to finetune, and start training!
+A black box module to use on any image classification problem using Tensorflow 2 and Keras. Plug in your data, choose which pre-trained model to finetune, and start training!
 
 
 ![ultimate image](https://user-images.githubusercontent.com/6074821/85757853-1a7d4b00-b710-11ea-8da6-256a97d6edd3.PNG)
@@ -90,6 +90,7 @@ We want to make your life easier when it comes to evaluation so we added the fol
 
 
 # Example
+Note: The following is a brief overview of an example usecase, for a complete walkthrough please visit this [blog](https://omar-mohamed.github.io/technical/2020/06/27/Ultimate-Image-Classification(walkthrough)/). <br/>
 This is an example usecase on a small dataset of about 450 images. We have 3 classes: gym, pool, and operating room. <br/>
 - Download images from [here](https://drive.google.com/drive/folders/1JaXOQW6MUSE5aSFNv_nQyz45h_WtkoJy?usp=sharing) 
 - Extract inside 'data' folder to have 'data/images'
