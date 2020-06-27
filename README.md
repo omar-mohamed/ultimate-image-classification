@@ -90,7 +90,7 @@ We want to make your life easier when it comes to evaluation so we added the fol
 
 
 # Example
-Note: The following is a brief overview of an example usecase, for a complete walkthrough please visit this [blog](https://omar-mohamed.github.io/technical/2020/06/27/Ultimate-Image-Classification(walkthrough)/). <br/>
+**Note: The following is a brief overview of an example usecase, for a complete walkthrough please visit this [blog](https://omar-mohamed.github.io/technical/2020/06/27/Ultimate-Image-Classification(walkthrough)/).** <br/> <br/>
 This is an example usecase on a small dataset of about 450 images. We have 3 classes: gym, pool, and operating room. <br/>
 - Download images from [here](https://drive.google.com/drive/folders/1JaXOQW6MUSE5aSFNv_nQyz45h_WtkoJy?usp=sharing) 
 - Extract inside 'data' folder to have 'data/images'
