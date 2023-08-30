@@ -63,7 +63,7 @@ We want to make your life easier when it comes to evaluation so we added the fol
 - Get AUC-ROC, precision, recall, F1, and automatic best threshold for exact match for multilabel classification
 
 # Usage
-
+*The project was last tested on a virtual environment of python 3.7, pip 23.2.1, and MacOS*
 - Download this repo
 - Have python 3.6+ 
 - pip install -r requirements.txt
